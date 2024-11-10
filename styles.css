@@ -1,4 +1,4 @@
-/* Reset basic styling */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,80 +6,144 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #000;
+  background-color: #121212;
+  font-family: Arial, sans-serif;
   overflow: hidden;
-  color: white;
+  position: relative;
 }
 
-/* Particle Background */
+/* Particles Background */
 #particles-js {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
 /* Profile Card */
 .profile-card {
-  background: #111;
-  border-radius: 8px;
+  width: 350px;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
   text-align: center;
-  padding: 20px;
-  width: 300px;
+  color: white;
 }
 
-.profile-card .profile-pic {
+.card-header {
+  background-color: #F41F21;
+  padding: 20px 0;
+  position: relative;
+}
+
+.menu-icon, .contact-icon {
+  position: absolute;
+  top: 15px;
+  color: white;
+}
+
+.menu-icon {
+  left: 20px;
+}
+
+.contact-icon {
+  right: 20px;
+}
+
+.profile-pic {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  border: 5px solid #000;
+  margin-top: 15px;
 }
 
-.profile-card h2 {
-  color: #ff4c4c;
+.card-header h2 {
   font-size: 24px;
+  margin-top: 10px;
 }
 
-.profile-card p {
-  margin: 5px 0;
+.card-header p {
+  font-size: 16px;
+  color: #f5f5f5;
+  font-weight: 300;
+  margin: 5px 0 20px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.card-content h3::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #f5f5f5;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .social-icons {
-  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.social-icons a img {
-  width: 25px;
-  margin: 0 8px;
+.social-icons a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e0253e;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 15px;
 }
 
 .follow-btn, .contact-btn {
-  padding: 8px 16px;
-  border: none;
+  padding: 10px 20px;
+  border: 2px solid #e0253e;
+  background-color: transparent;
+  color: #e0253e;
+  font-size: 14px;
+  font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.follow-btn {
-  background-color: #ff4c4c;
-  color: white;
-}
-
-.contact-btn {
-  background-color: #333;
+.follow-btn:hover, .contact-btn:hover {
+  background-color: #e0253e;
   color: white;
 }
