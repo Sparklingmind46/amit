@@ -30,7 +30,7 @@ body {
 .profile-card {
   width: 350px;
   background-color: #000;
-  border-radius: 20px;
+  border-radius: 7px;
   overflow: hidden;
   text-align: center;
   color: white;
